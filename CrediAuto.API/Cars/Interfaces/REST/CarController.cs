@@ -1,0 +1,89 @@
+﻿using System.Net.Mime;
+using CrediAuto.API.Cars.Domain.Model.Commands;
+using CrediAuto.API.Cars.Domain.Model.Queries;
+using CrediAuto.API.Cars.Domain.Services;
+using CrediAuto.API.Cars.Interfaces.REST.Resources;
+using CrediAuto.API.Cars.Interfaces.REST.Transform;
+using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
+
+namespace CrediAuto.API.Cars.Interfaces.REST;
+
+[ApiController]
+[Route("api/v1/[controller]")]
+[Produces(MediaTypeNames.Application.Json)]
+[Tags("Car")]
+public class CarController(
+    ICarCommandService carCommandService,
+    ICarQueryService carQueryService)
+    : ControllerBase
+{
+    [HttpPost]
+    [SwaggerOperation(Summary = "Create a new Car", OperationId = "CreateCar")]
+    [SwaggerResponse(201, "Created car", typeof(CarResource))]
+    [SwaggerResponse(400, "The car was not created")]
+    public async Task<IActionResult> CreateCar([FromBody] CreateCarResource resource)
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var command = CreateCarCommandFromResourceAssembler.ToCommandFromResource(resource);
+        var result = await carCommandService.Handle(command);
+        if (result is null) return BadRequest();
+        return CreatedAtAction(nameof(GetCarById), new { id = result.Id },
+            CarResourceFromEntityAssembler.ToResourceFromEntity(result));
+    }
+
+    [HttpGet("{id:int}")]
+    [SwaggerOperation(Summary = "Get a Car by Id", OperationId = "GetCarById")]
+    [SwaggerResponse(200, "The car was found", typeof(CarResource))]
+    [SwaggerResponse(404, "Car not found")]
+    public async Task<IActionResult> GetCarById(int id)
+    {
+        var result = await carQueryService.Handle(new GetCarByIdQuery(id));
+        if (result is null) return NotFound();
+        return Ok(CarResourceFromEntityAssembler.ToResourceFromEntity(result));
+    }
+
+    [HttpGet]
+    [SwaggerOperation(Summary = "Get all Cars", OperationId = "GetAllCars")]
+    [SwaggerResponse(200, "List of cars", typeof(IEnumerable<CarResource>))]
+    public async Task<IActionResult> GetAllCars()
+    {
+        var results = await carQueryService.Handle(new GetAllCarsQuery());
+        var resources = results.Select(CarResourceFromEntityAssembler.ToResourceFromEntity).ToList();
+        return Ok(resources);
+    }
+
+    [HttpGet("status/{estadoAprobacion}")]
+    [SwaggerOperation(Summary = "Get Cars by approval status", OperationId = "GetCarsByEstadoAprobacion")]
+    [SwaggerResponse(200, "List of cars with the given approval status", typeof(IEnumerable<CarResource>))]
+    public async Task<IActionResult> GetCarsByEstadoAprobacion(string estadoAprobacion)
+    {
+        var results = await carQueryService.Handle(new GetCarsByEstadoAprobacionQuery(estadoAprobacion));
+        var resources = results.Select(CarResourceFromEntityAssembler.ToResourceFromEntity).ToList();
+        return Ok(resources);
+    }
+
+    [HttpPatch("{id:int}/approval-status")]
+    [SwaggerOperation(Summary = "Update Car approval status", OperationId = "UpdateCarApprovalStatus")]
+    [SwaggerResponse(200, "Car approval status updated", typeof(CarResource))]
+    [SwaggerResponse(404, "Car not found")]
+    public async Task<IActionResult> UpdateCarApprovalStatus(int id, [FromBody] UpdateCarApprovalStatusResource resource)
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var command = new UpdateCarApprovalStatusCommand(id, resource.EstadoAprobacion);
+        var result = await carCommandService.Handle(command);
+        if (result is null) return NotFound($"Car with ID {id} not found.");
+        return Ok(CarResourceFromEntityAssembler.ToResourceFromEntity(result));
+    }
+
+    [HttpDelete("{id:int}")]
+    [SwaggerOperation(Summary = "Delete a Car", OperationId = "DeleteCar")]
+    [SwaggerResponse(204, "Car deleted")]
+    [SwaggerResponse(404, "Car not found")]
+    public async Task<IActionResult> DeleteCar(int id)
+    {
+        var result = await carCommandService.Handle(new DeleteCarCommand(id));
+        if (!result) return NotFound($"Car with ID {id} not found.");
+        return NoContent();
+    }
+}
