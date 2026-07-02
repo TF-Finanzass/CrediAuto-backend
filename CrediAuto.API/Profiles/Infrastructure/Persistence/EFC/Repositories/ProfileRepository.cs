@@ -1,3 +1,5 @@
+using System.Linq;
+using System.Threading.Tasks;
 using CrediAuto.API.Profiles.Domain.Model.Aggregates;
 using CrediAuto.API.Profiles.Domain.Model.ValueObjects;
 using CrediAuto.API.Profiles.Domain.Repositories;

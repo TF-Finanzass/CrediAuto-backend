@@ -2,7 +2,8 @@
 
 public record UpdateClientCommand(
     int ClientId,
-    string Nombre,
+    string FullName,
+    string LastName,
     string Email,
-    string Telefono
-    );
+    string Phone
+);

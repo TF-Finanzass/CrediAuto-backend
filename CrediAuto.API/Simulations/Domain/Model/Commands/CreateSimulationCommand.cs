@@ -1,4 +1,6 @@
-﻿namespace CrediAuto.API.Simulations.Domain.Model.Commands;
+﻿using System;
+
+namespace CrediAuto.API.Simulations.Domain.Model.Commands;
 
 public record CreateSimulationCommand(
     decimal Monto,

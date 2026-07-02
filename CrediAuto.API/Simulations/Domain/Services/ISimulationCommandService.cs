@@ -1,4 +1,5 @@
-﻿using CrediAuto.API.Simulations.Domain.Model.Aggregates;
+﻿using System.Threading.Tasks;
+using CrediAuto.API.Simulations.Domain.Model.Aggregates;
 using CrediAuto.API.Simulations.Domain.Model.Commands;
 
 namespace CrediAuto.API.Simulations.Domain.Services;

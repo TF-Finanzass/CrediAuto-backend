@@ -1,9 +1,13 @@
-﻿using System.Net.Mime;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Net.Mime;
+using System.Threading.Tasks;
 using CrediAuto.API.Simulations.Domain.Model.Commands;
 using CrediAuto.API.Simulations.Domain.Model.Queries;
 using CrediAuto.API.Simulations.Domain.Services;
 using CrediAuto.API.Simulations.Interfaces.REST.Resources;
 using CrediAuto.API.Simulations.Interfaces.REST.Transform;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 

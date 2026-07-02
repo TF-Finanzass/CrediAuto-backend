@@ -1,7 +1,6 @@
 using CrediAuto.API.Cars.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using CrediAuto.API.Clients.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using CrediAuto.API.IAM.Infrastructure.Persistence.EFC.Configuration.Extensions;
-using CrediAuto.API.Payments.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using CrediAuto.API.Profiles.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using CrediAuto.API.Schedules.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using CrediAuto.API.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
@@ -39,10 +38,7 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
         builder.ApplyCarsConfiguration();
     
         // Schedules Context
-        builder.ApplySchedulesConfiguration();
-    
-        // Payments Context
-        builder.ApplyPaymentsConfiguration();
+        builder.ApplyCreditOperationsConfiguration();
     
         // Simulations Context
         builder.ApplySimulationsConfiguration();

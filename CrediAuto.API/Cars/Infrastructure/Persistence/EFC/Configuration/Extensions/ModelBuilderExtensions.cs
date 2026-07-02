@@ -9,10 +9,15 @@ public static class ModelBuilderExtensions
     {
         builder.Entity<Car>().HasKey(c => c.Id);
         builder.Entity<Car>().Property(c => c.Id).IsRequired().ValueGeneratedOnAdd();
-        builder.Entity<Car>().Property(c => c.Marca).IsRequired();
-        builder.Entity<Car>().Property(c => c.Modelo).IsRequired();
-        builder.Entity<Car>().Property(c => c.Anio).IsRequired();
-        builder.Entity<Car>().Property(c => c.Precio).IsRequired();
-        builder.Entity<Car>().Property(c => c.EstadoAprobacion).IsRequired();
+        builder.Entity<Car>().Property(c => c.Brand).IsRequired();
+        builder.Entity<Car>().Property(c => c.Model).IsRequired();
+        builder.Entity<Car>().Property(c => c.Year).IsRequired();
+        builder.Entity<Car>().Property(c => c.Price).IsRequired();
+        builder.Entity<Car>().Property(c => c.FuelType).IsRequired();
+        builder.Entity<Car>().Property(c => c.Transmission).IsRequired();
+        builder.Entity<Car>().Property(c => c.Detail);
+        builder.Entity<Car>()
+            .Property(c => c.Status)
+            .HasConversion<string>();
     }
 }

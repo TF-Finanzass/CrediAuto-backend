@@ -7,10 +7,12 @@ public static class CreateCarCommandFromResourceAssembler
 {
     public static CreateCarCommand ToCommandFromResource(CreateCarResource resource) =>
         new CreateCarCommand(
-            resource.Marca, 
-            resource.Modelo, 
-            resource.Anio,
-            resource.Precio, 
-            resource.EstadoAprobacion
-            );
+            resource.Brand,
+            resource.Model,
+            resource.Year,
+            resource.Price,
+            resource.FuelType,
+            resource.Transmission,
+            resource.Detail
+        );
 }

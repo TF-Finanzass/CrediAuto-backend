@@ -1,3 +1,4 @@
+using System;
 using CrediAuto.API.IAM.Application.Internal.CommandServices;
 using CrediAuto.API.IAM.Application.Internal.OutboundServices;
 using CrediAuto.API.IAM.Application.Internal.QueryServices;
@@ -5,7 +6,6 @@ using CrediAuto.API.IAM.Domain.Repositories;
 using CrediAuto.API.IAM.Domain.Services;
 using CrediAuto.API.IAM.Infrastructure.Hashing.BCrypt.Services;
 using CrediAuto.API.IAM.Infrastructure.Persistence.EFC.Repositories;
-using CrediAuto.API.IAM.Infrastructure.Pipeline.Middleware.Extensions;
 using CrediAuto.API.IAM.Infrastructure.Tokens.JWT.Configuration;
 using CrediAuto.API.IAM.Infrastructure.Tokens.JWT.Services;
 using CrediAuto.API.IAM.Interfaces.ACL;
@@ -21,7 +21,6 @@ using CrediAuto.API.Shared.Infrastructure.Mediator.Cortex.Configuration;
 using CrediAuto.API.Shared.Infrastructure.Persistence.EFC.Configuration;
 using CrediAuto.API.Shared.Infrastructure.Persistence.EFC.Repositories;
 using Cortex.Mediator.Commands;
-using Cortex.Mediator.DependencyInjection;
 using CrediAuto.API.Cars.Application.Internal.CommandServices;
 using CrediAuto.API.Cars.Application.Internal.QueryServices;
 using CrediAuto.API.Cars.Domain.Repositories;
@@ -32,16 +31,6 @@ using CrediAuto.API.Clients.Application.Internal.QueryServices;
 using CrediAuto.API.Clients.Domain.Repositories;
 using CrediAuto.API.Clients.Domain.Services;
 using CrediAuto.API.Clients.Infrastructure.Persistence.EFC.Repositories;
-using CrediAuto.API.Payments.Application.Internal.CommandServices;
-using CrediAuto.API.Payments.Application.Internal.QueryServices;
-using CrediAuto.API.Payments.Domain.Repositories;
-using CrediAuto.API.Payments.Domain.Services;
-using CrediAuto.API.Payments.Infrastructure.Persistence.EFC.Repositories;
-using CrediAuto.API.Schedules.Application.Internal.CommandServices;
-using CrediAuto.API.Schedules.Application.Internal.QueryServices;
-using CrediAuto.API.Schedules.Domain.Repositories;
-using CrediAuto.API.Schedules.Domain.Services;
-using CrediAuto.API.Schedules.Infrastructure.Persistence.EFC.Repositories;
 using CrediAuto.API.Simulations.Application.Internal.CommandServices;
 using CrediAuto.API.Simulations.Application.Internal.QueryServices;
 using CrediAuto.API.Simulations.Domain.Repositories;
@@ -49,11 +38,28 @@ using CrediAuto.API.Simulations.Domain.Services;
 using CrediAuto.API.Simulations.Infrastructure.Persistence.EFC.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using System.Text.Json.Serialization;
+using Cortex.Mediator.DependencyInjection;
+using CrediAuto.API.IAM.Infrastructure.Pipeline.Middleware.Extensions;
+using CrediAuto.API.Schedules.Application.Internal.CommandServices;
+using CrediAuto.API.Schedules.Application.Internal.QueryServices;
+using CrediAuto.API.Schedules.Domain.Repositories;
+using CrediAuto.API.Schedules.Domain.Services;
+using CrediAuto.API.Schedules.Infrastructure.Persistence.EFC.Repositories;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
-builder.Services.AddControllers(options => options.Conventions.Add(new KebabCaseRouteNamingConvention()));
+builder.Services.AddControllers(options => options.Conventions.Add(new KebabCaseRouteNamingConvention()))
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
@@ -154,15 +160,10 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IHashingService, HashingService>();
 builder.Services.AddScoped<IIamContextFacade, IamContextFacade>();
 
-// Payments
-builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
-builder.Services.AddScoped<IPaymentCommandService, PaymentCommandService>();
-builder.Services.AddScoped<IPaymentQueryService, PaymentQueryService>();
-
 // Schedules
-builder.Services.AddScoped<IScheduleRepository, ScheduleRepository>();
-builder.Services.AddScoped<IScheduleCommandService, ScheduleCommandService>();
-builder.Services.AddScoped<IScheduleQueryService, ScheduleQueryService>();
+builder.Services.AddScoped<ICreditOperationRepository, CreditOperationRepository>();
+builder.Services.AddScoped<ICreditOperationCommandService, CreditOperationCommandService>();
+builder.Services.AddScoped<ICreditOperationQueryService, CreditOperationQueryService>();
 
 // Simulations
 builder.Services.AddScoped<ISimulationRepository, SimulationRepository>();

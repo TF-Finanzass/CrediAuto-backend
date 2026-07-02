@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using CrediAuto.API.IAM.Domain.Model.Commands;
 using CrediAuto.API.IAM.Domain.Model.Enums;
 using CrediAuto.API.IAM.Domain.Model.Queries;

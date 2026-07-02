@@ -1,9 +1,14 @@
-﻿using System.Net.Mime;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Net.Mime;
+using System.Threading.Tasks;
 using CrediAuto.API.Clients.Domain.Model.Commands;
 using CrediAuto.API.Clients.Domain.Model.Queries;
+using CrediAuto.API.Clients.Domain.Model.ValueObjects;
 using CrediAuto.API.Clients.Domain.Services;
 using CrediAuto.API.Clients.Interfaces.REST.Resources;
 using CrediAuto.API.Clients.Interfaces.REST.Transform;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -28,7 +33,7 @@ public class ClientController(
         if (!ModelState.IsValid) return BadRequest(ModelState);
         var command = CreateClientCommandFromResourceAssembler.ToCommandFromResource(resource);
         var result = await clientCommandService.Handle(command);
-        if (result is null) return Conflict("A client with the same DNI already exists.");
+        if (result is null) return Conflict("A client with the same Document Number already exists.");
         return CreatedAtAction(nameof(GetClientById), new { id = result.Id },
             ClientResourceFromEntityAssembler.ToResourceFromEntity(result));
     }
@@ -54,13 +59,13 @@ public class ClientController(
         return Ok(resources);
     }
 
-    [HttpGet("dni/{dni}")]
-    [SwaggerOperation(Summary = "Get a Client by DNI", OperationId = "GetClientByDni")]
+    [HttpGet("document/{documentNumber}")]
+    [SwaggerOperation(Summary = "Get a Client by document number", OperationId = "GetClientByDocumentNumber")]
     [SwaggerResponse(200, "The client was found", typeof(ClientResource))]
     [SwaggerResponse(404, "Client not found")]
-    public async Task<IActionResult> GetClientByDni(string dni)
+    public async Task<IActionResult> GetClientByDocumentNumber(string documentNumber)
     {
-        var result = await clientQueryService.Handle(new GetClientByDniQuery(dni));
+        var result = await clientQueryService.Handle(new GetClientByDocumentNumberQuery(documentNumber));
         if (result is null) return NotFound();
         return Ok(ClientResourceFromEntityAssembler.ToResourceFromEntity(result));
     }
@@ -83,7 +88,30 @@ public class ClientController(
     public async Task<IActionResult> UpdateClient(int id, [FromBody] UpdateClientResource resource)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
-        var command = new UpdateClientCommand(id, resource.Nombre, resource.Email, resource.Telefono);
+        var command = new UpdateClientCommand(id, resource.FullName, resource.LastName, resource.Email, resource.Phone);
+        var result = await clientCommandService.Handle(command);
+        if (result is null) return NotFound($"Client with ID {id} not found.");
+        return Ok(ClientResourceFromEntityAssembler.ToResourceFromEntity(result));
+    }
+
+    [HttpGet("status/{status}")]
+    [SwaggerOperation(Summary = "Get Clients by status", OperationId = "GetClientsByStatus")]
+    [SwaggerResponse(200, "List of clients with the given status", typeof(IEnumerable<ClientResource>))]
+    public async Task<IActionResult> GetClientsByStatus(ClientStatus status)
+    {
+        var results = await clientQueryService.Handle(new GetClientsByStatusQuery(status));
+        var resources = results.Select(ClientResourceFromEntityAssembler.ToResourceFromEntity).ToList();
+        return Ok(resources);
+    }
+
+    [HttpPatch("{id:int}/status")]
+    [SwaggerOperation(Summary = "Update Client status", OperationId = "UpdateClientStatus")]
+    [SwaggerResponse(200, "Client status updated", typeof(ClientResource))]
+    [SwaggerResponse(404, "Client not found")]
+    public async Task<IActionResult> UpdateClientStatus(int id, [FromBody] UpdateClientStatusResource resource)
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var command = new UpdateClientStatusCommand(id, resource.Status);
         var result = await clientCommandService.Handle(command);
         if (result is null) return NotFound($"Client with ID {id} not found.");
         return Ok(ClientResourceFromEntityAssembler.ToResourceFromEntity(result));

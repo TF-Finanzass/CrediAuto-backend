@@ -3,7 +3,8 @@
 namespace CrediAuto.API.Clients.Interfaces.REST.Resources;
 
 public record UpdateClientResource(
-    [Required] string Nombre,
+    [Required] string FullName,
+    [Required] string LastName,
     [Required] string Email,
-    [Required] string Telefono
-    );
+    [Required] string Phone
+);

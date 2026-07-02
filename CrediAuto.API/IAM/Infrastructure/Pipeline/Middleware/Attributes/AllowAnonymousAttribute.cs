@@ -1,3 +1,5 @@
+using System;
+
 namespace CrediAuto.API.IAM.Infrastructure.Pipeline.Middleware.Attributes;
 
 [AttributeUsage(AttributeTargets.Method)]

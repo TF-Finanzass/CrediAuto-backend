@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace CrediAuto.API.Shared.Domain.Repositories;
 
 public interface IBaseRepository<TEntity>

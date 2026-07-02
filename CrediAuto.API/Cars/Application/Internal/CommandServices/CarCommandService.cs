@@ -1,4 +1,6 @@
-﻿using CrediAuto.API.Cars.Domain.Model.Aggregates;
+﻿using System;
+using System.Threading.Tasks;
+using CrediAuto.API.Cars.Domain.Model.Aggregates;
 using CrediAuto.API.Cars.Domain.Model.Commands;
 using CrediAuto.API.Cars.Domain.Repositories;
 using CrediAuto.API.Cars.Domain.Services;
@@ -44,19 +46,19 @@ public class CarCommandService(
         }
     }
 
-    public async Task<Car?> Handle(UpdateCarApprovalStatusCommand command)
+    public async Task<Car?> Handle(UpdateCarStatusCommand command)
     {
         var car = await carRepository.FindByIdAsync(command.CarId);
         if (car is null) return null;
         try
         {
-            car.UpdateApprovalStatus(command.EstadoAprobacion);
+            car.UpdateStatus(command.Status);
             carRepository.Update(car);
             await unitOfWork.CompleteAsync();
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error updating Car approval status: {ex.Message}");
+            Console.WriteLine($"Error updating Car status: {ex.Message}");
             return null;
         }
         return car;

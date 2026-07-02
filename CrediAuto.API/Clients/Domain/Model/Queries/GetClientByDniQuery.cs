@@ -1,5 +1,5 @@
 ﻿namespace CrediAuto.API.Clients.Domain.Model.Queries;
 
-public record GetClientByDniQuery(
-    string Dni
+public record GetClientByDocumentNumberQuery(
+    string DocumentNumber
     );

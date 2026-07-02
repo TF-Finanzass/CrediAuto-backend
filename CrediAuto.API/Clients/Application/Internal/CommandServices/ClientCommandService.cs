@@ -1,4 +1,6 @@
-﻿using CrediAuto.API.Clients.Domain.Model.Aggregates;
+﻿using System;
+using System.Threading.Tasks;
+using CrediAuto.API.Clients.Domain.Model.Aggregates;
 using CrediAuto.API.Clients.Domain.Model.Commands;
 using CrediAuto.API.Clients.Domain.Repositories;
 using CrediAuto.API.Clients.Domain.Services;
@@ -13,7 +15,7 @@ public class ClientCommandService(
 {
     public async Task<Client?> Handle(CreateClientCommand command)
     {
-        var existing = await clientRepository.FindByDniAsync(command.Dni);
+        var existing = await clientRepository.FindByDocumentNumberAsync(command.DocumentNumber);
         if (existing is not null) return null;
 
         var client = new Client(command);
@@ -46,20 +48,38 @@ public class ClientCommandService(
             return false;
         }
     }
-
+    
     public async Task<Client?> Handle(UpdateClientCommand command)
     {
         var client = await clientRepository.FindByIdAsync(command.ClientId);
         if (client is null) return null;
         try
         {
-            client.UpdateContactInfo(command.Nombre, command.Email, command.Telefono);
+            client.UpdateContactInfo(command.FullName, command.LastName, command.Email, command.Phone);
             clientRepository.Update(client);
             await unitOfWork.CompleteAsync();
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Error updating Client: {ex.Message}");
+            return null;
+        }
+        return client;
+    }
+
+    public async Task<Client?> Handle(UpdateClientStatusCommand command)
+    {
+        var client = await clientRepository.FindByIdAsync(command.ClientId);
+        if (client is null) return null;
+        try
+        {
+            client.UpdateStatus(command.Status);
+            clientRepository.Update(client);
+            await unitOfWork.CompleteAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error updating Client status: {ex.Message}");
             return null;
         }
         return client;

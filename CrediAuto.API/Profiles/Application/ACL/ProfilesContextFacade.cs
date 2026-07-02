@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using CrediAuto.API.Profiles.Domain.Model.Commands;
 using CrediAuto.API.Profiles.Domain.Model.Queries;
 using CrediAuto.API.Profiles.Domain.Model.ValueObjects;

@@ -1,4 +1,6 @@
-﻿using CrediAuto.API.Cars.Domain.Model.Aggregates;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using CrediAuto.API.Cars.Domain.Model.Aggregates;
 using CrediAuto.API.Cars.Domain.Model.Queries;
 using CrediAuto.API.Cars.Domain.Repositories;
 using CrediAuto.API.Cars.Domain.Services;
@@ -14,6 +16,6 @@ public class CarQueryService(ICarRepository carRepository)
     public async Task<IEnumerable<Car>> Handle(GetAllCarsQuery query)
         => await carRepository.ListAsync();
 
-    public async Task<IEnumerable<Car>> Handle(GetCarsByEstadoAprobacionQuery query)
-        => await carRepository.FindByEstadoAprobacionAsync(query.EstadoAprobacion);
+    public async Task<IEnumerable<Car>> Handle(GetCarsByStatusQuery query)
+        => await carRepository.FindByStatusAsync(query.Status);
 }

@@ -1,9 +1,15 @@
-﻿using System.Net.Mime;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Net.Mime;
+using System.Threading.Tasks;
 using CrediAuto.API.Cars.Domain.Model.Commands;
 using CrediAuto.API.Cars.Domain.Model.Queries;
+using CrediAuto.API.Cars.Domain.Model.ValueObjects;
 using CrediAuto.API.Cars.Domain.Services;
 using CrediAuto.API.Cars.Interfaces.REST.Resources;
 using CrediAuto.API.Cars.Interfaces.REST.Transform;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -33,6 +39,7 @@ public class CarController(
     }
 
     [HttpGet("{id:int}")]
+    [AllowAnonymous]
     [SwaggerOperation(Summary = "Get a Car by Id", OperationId = "GetCarById")]
     [SwaggerResponse(200, "The car was found", typeof(CarResource))]
     [SwaggerResponse(404, "Car not found")]
@@ -44,6 +51,7 @@ public class CarController(
     }
 
     [HttpGet]
+    [AllowAnonymous]
     [SwaggerOperation(Summary = "Get all Cars", OperationId = "GetAllCars")]
     [SwaggerResponse(200, "List of cars", typeof(IEnumerable<CarResource>))]
     public async Task<IActionResult> GetAllCars()
@@ -53,24 +61,25 @@ public class CarController(
         return Ok(resources);
     }
 
-    [HttpGet("status/{estadoAprobacion}")]
-    [SwaggerOperation(Summary = "Get Cars by approval status", OperationId = "GetCarsByEstadoAprobacion")]
-    [SwaggerResponse(200, "List of cars with the given approval status", typeof(IEnumerable<CarResource>))]
-    public async Task<IActionResult> GetCarsByEstadoAprobacion(string estadoAprobacion)
+    [HttpGet("status/{status}")]
+    [AllowAnonymous]
+    [SwaggerOperation(Summary = "Get Cars by status", OperationId = "GetCarsByStatus")]
+    [SwaggerResponse(200, "List of cars with the given status", typeof(IEnumerable<CarResource>))]
+    public async Task<IActionResult> GetCarsByStatus(CarStatus status)
     {
-        var results = await carQueryService.Handle(new GetCarsByEstadoAprobacionQuery(estadoAprobacion));
+        var results = await carQueryService.Handle(new GetCarsByStatusQuery(status));
         var resources = results.Select(CarResourceFromEntityAssembler.ToResourceFromEntity).ToList();
         return Ok(resources);
     }
 
-    [HttpPatch("{id:int}/approval-status")]
-    [SwaggerOperation(Summary = "Update Car approval status", OperationId = "UpdateCarApprovalStatus")]
-    [SwaggerResponse(200, "Car approval status updated", typeof(CarResource))]
+    [HttpPatch("{id:int}/status")]
+    [SwaggerOperation(Summary = "Update Car status", OperationId = "UpdateCarStatus")]
+    [SwaggerResponse(200, "Car status updated", typeof(CarResource))]
     [SwaggerResponse(404, "Car not found")]
-    public async Task<IActionResult> UpdateCarApprovalStatus(int id, [FromBody] UpdateCarApprovalStatusResource resource)
+    public async Task<IActionResult> UpdateCarStatus(int id, [FromBody] UpdateCarStatusResource resource)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
-        var command = new UpdateCarApprovalStatusCommand(id, resource.EstadoAprobacion);
+        var command = new UpdateCarStatusCommand(id, resource.Status);
         var result = await carCommandService.Handle(command);
         if (result is null) return NotFound($"Car with ID {id} not found.");
         return Ok(CarResourceFromEntityAssembler.ToResourceFromEntity(result));

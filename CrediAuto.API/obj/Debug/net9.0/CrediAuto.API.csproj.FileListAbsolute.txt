@@ -127,3 +127,4 @@ D:\Projects\Rider\CrediAuto-backend\CrediAuto.API\bin\Debug\net9.0\ms-MY\Humaniz
 D:\Projects\Rider\CrediAuto-backend\CrediAuto.API\bin\Debug\net9.0\nb-NO\Humanizer.resources.dll
 D:\Projects\Rider\CrediAuto-backend\CrediAuto.API\bin\Debug\net9.0\th-TH\Humanizer.resources.dll
 D:\Projects\Rider\CrediAuto-backend\CrediAuto.API\obj\Debug\net9.0\swae.build.ex.cache
+D:\Projects\Rider\CrediAuto-backend\CrediAuto.API\obj\Debug\net9.0\CrediAuto.API.sourcelink.json

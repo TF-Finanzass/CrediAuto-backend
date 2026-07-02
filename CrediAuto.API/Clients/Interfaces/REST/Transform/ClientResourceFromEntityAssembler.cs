@@ -7,13 +7,16 @@ public static class ClientResourceFromEntityAssembler
 {
     public static ClientResource ToResourceFromEntity(Client entity) =>
         new ClientResource(
-            entity.Id, 
-            entity.Nombre, 
-            entity.Dni, 
+            entity.Id,
+            entity.FullName,
+            entity.LastName,
+            entity.DocumentNumber,
             entity.Email,
-            entity.Telefono, 
-            entity.UserId, 
-            entity.CreatedDate, 
+            entity.Phone,
+            entity.MonthlyIncome,
+            entity.UserId,
+            entity.Status,
+            entity.CreatedDate,
             entity.UpdatedDate
-            );
+        );
 }

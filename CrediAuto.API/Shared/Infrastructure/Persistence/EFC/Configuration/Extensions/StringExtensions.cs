@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Humanizer;
 
 namespace CrediAuto.API.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;

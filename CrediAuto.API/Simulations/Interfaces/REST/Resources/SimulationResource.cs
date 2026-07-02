@@ -1,4 +1,6 @@
-﻿namespace CrediAuto.API.Simulations.Interfaces.REST.Resources;
+﻿using System;
+
+namespace CrediAuto.API.Simulations.Interfaces.REST.Resources;
 
 public record SimulationResource(
     int Id,

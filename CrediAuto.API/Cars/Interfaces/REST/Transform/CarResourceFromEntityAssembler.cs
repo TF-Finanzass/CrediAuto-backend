@@ -7,13 +7,16 @@ public static class CarResourceFromEntityAssembler
 {
     public static CarResource ToResourceFromEntity(Car entity) =>
         new CarResource(
-            entity.Id, 
-            entity.Marca, 
-            entity.Modelo, 
-            entity.Anio,
-            entity.Precio, 
-            entity.EstadoAprobacion, 
-            entity.CreatedDate, 
+            entity.Id,
+            entity.Brand,
+            entity.Model,
+            entity.Year,
+            entity.Price,
+            entity.FuelType,
+            entity.Transmission,
+            entity.Detail,
+            entity.Status,
+            entity.CreatedDate,
             entity.UpdatedDate
-            );
+        );
 }

@@ -1,38 +1,54 @@
 ﻿using CrediAuto.API.Clients.Domain.Model.Commands;
+using CrediAuto.API.Clients.Domain.Model.ValueObjects;
 
 namespace CrediAuto.API.Clients.Domain.Model.Aggregates;
 
 public partial class Client : ClientAudit
 {
     public int Id { get; }
-    public string Nombre { get; private set; }
-    public string Dni { get; private set; }
+    public string FullName { get; private set; }
+    public string LastName { get; private set; }
+    public string DocumentNumber { get; private set; }
     public string Email { get; private set; }
-    public string Telefono { get; private set; }
+    public string Phone { get; private set; }
+    public decimal MonthlyIncome { get; private set; }
     public int UserId { get; private set; }
+    public ClientStatus Status { get; private set; }
 
     protected Client()
     {
-        Nombre = string.Empty;
-        Dni = string.Empty;
+        FullName = string.Empty;
+        LastName = string.Empty;
+        DocumentNumber = string.Empty;
         Email = string.Empty;
-        Telefono = string.Empty;
+        Phone = string.Empty;
+        MonthlyIncome = 0;
         UserId = 0;
+        Status = ClientStatus.Pendiente;
     }
 
     public Client(CreateClientCommand command)
     {
-        Nombre = command.Nombre;
-        Dni = command.Dni;
+        FullName = command.FullName;
+        LastName = command.LastName;
+        DocumentNumber = command.DocumentNumber;
         Email = command.Email;
-        Telefono = command.Telefono;
+        Phone = command.Phone;
+        MonthlyIncome = command.MonthlyIncome;
         UserId = command.UserId;
+        Status = ClientStatus.Pendiente;
     }
     
-    public void UpdateContactInfo(string nombre, string email, string telefono)
+    public void UpdateContactInfo(string fullName, string lastName, string email, string phone)
     {
-        Nombre = nombre;
+        FullName = fullName;
+        LastName = lastName;
         Email = email;
-        Telefono = telefono;
+        Phone = phone;
+    }
+
+    public void UpdateStatus(ClientStatus status)
+    {
+        Status = status;
     }
 }

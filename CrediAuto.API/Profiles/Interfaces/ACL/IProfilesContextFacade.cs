@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+
 namespace CrediAuto.API.Profiles.Interfaces.ACL;
 
 public interface IProfilesContextFacade

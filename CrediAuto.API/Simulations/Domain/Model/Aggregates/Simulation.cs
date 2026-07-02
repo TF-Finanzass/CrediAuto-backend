@@ -1,4 +1,5 @@
-﻿using CrediAuto.API.Simulations.Domain.Model.Commands;
+﻿using System;
+using CrediAuto.API.Simulations.Domain.Model.Commands;
 
 namespace CrediAuto.API.Simulations.Domain.Model.Aggregates;
 

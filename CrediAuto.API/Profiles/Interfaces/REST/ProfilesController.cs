@@ -1,4 +1,7 @@
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Mime;
+using System.Threading.Tasks;
 using CrediAuto.API.Profiles.Domain.Model.Queries;
 using CrediAuto.API.Profiles.Domain.Services;
 using CrediAuto.API.Profiles.Interfaces.REST.Resources;
