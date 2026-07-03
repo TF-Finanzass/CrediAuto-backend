@@ -19,178 +19,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ca99013-9ead-40cb-a0ef-7f5b7a193573" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/ValueObjects/CarStatus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Model/Commands/UpdateClientStatusCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Model/Queries/GetClientsByEstadoQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Model/ValueObjects/ClientStatus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Interfaces/REST/Resources/UpdateClientStatusResource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Application/Internal/CommandServices/CreditOperationCommandService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Application/Internal/QueryServices/CreditOperationQueryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Aggregates/CreditOperation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Aggregates/CreditOperationAudit.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Aggregates/Installment.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Commands/CreateCreditOperationCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Commands/DeleteCreditOperationCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Commands/InstallmentData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Queries/GetCreditOperationsByCarIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Queries/GetCreditOperationsByClientIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Repositories/ICreditOperationRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Services/ICreditOperationCommandService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Services/ICreditOperationQueryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Infrastructure/Persistence/EFC/Repositories/CreditOperationRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/CreditOperationController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/CreateCreditOperationResource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/CreateInstallmentResource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/CreditOperationResource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/InstallmentResource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Transform/CreateCreditOperationCommandFromResourceAssembler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Transform/CreditOperationResourceFromEntityAssembler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Transform/InstallmentResourceFromEntityAssembler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/dataSources/39f72e76-d6f3-4d19-a117-54f3a066f346.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/dataSources/39f72e76-d6f3-4d19-a117-54f3a066f346.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/dataSources/data_sources_history.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto-backend.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto-backend.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Application/Internal/CommandServices/CarCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Application/Internal/CommandServices/CarCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Application/Internal/QueryServices/CarQueryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Application/Internal/QueryServices/CarQueryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Aggregates/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Aggregates/Car.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Aggregates/CarAudit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Aggregates/CarAudit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Commands/CreateCarCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Commands/CreateCarCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Commands/UpdateCarApprovalStatusCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Commands/UpdateCarStatusCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Queries/GetCarsByEstadoAprobacionQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Queries/GetCarsByStatusQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Repositories/ICarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Repositories/ICarRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Services/ICarCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Services/ICarCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Services/ICarQueryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Services/ICarQueryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Infrastructure/Persistence/EFC/Repositories/CarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Infrastructure/Persistence/EFC/Repositories/CarRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/CarController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Resources/CarResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Resources/CarResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Resources/CreateCarResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Resources/CreateCarResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Resources/UpdateCarApprovalStatusResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Resources/UpdateCarApprovalStatusResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Transform/CarResourceFromEntityAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Transform/CarResourceFromEntityAssembler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Transform/CreateCarCommandFromResourceAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Transform/CreateCarCommandFromResourceAssembler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Application/Internal/CommandServices/ClientCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Application/Internal/CommandServices/ClientCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Application/Internal/QueryServices/ClientQueryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Application/Internal/QueryServices/ClientQueryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Model/Aggregates/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Model/Aggregates/Client.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Model/Aggregates/ClientAudit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Model/Aggregates/ClientAudit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Model/Commands/CreateClientCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Model/Commands/CreateClientCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Model/Commands/UpdateClientCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Model/Commands/UpdateClientCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Model/Queries/GetClientByDniQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Model/Queries/GetClientByDniQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Repositories/IClientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Repositories/IClientRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Services/IClientCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Services/IClientCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Services/IClientQueryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Domain/Services/IClientQueryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Infrastructure/Persistence/EFC/Repositories/ClientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Infrastructure/Persistence/EFC/Repositories/ClientRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Interfaces/REST/ClientController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Interfaces/REST/ClientController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Interfaces/REST/Resources/ClientResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Interfaces/REST/Resources/ClientResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Interfaces/REST/Resources/CreateClientResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Interfaces/REST/Resources/CreateClientResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Interfaces/REST/Resources/UpdateClientResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Interfaces/REST/Resources/UpdateClientResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Interfaces/REST/Transform/ClientResourceFromEntityAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Interfaces/REST/Transform/ClientResourceFromEntityAssembler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Clients/Interfaces/REST/Transform/CreateClientCommandFromResourceAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Clients/Interfaces/REST/Transform/CreateClientCommandFromResourceAssembler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/IAM/Application/Internal/CommandServices/UserCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/IAM/Application/Internal/CommandServices/UserCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/IAM/Application/Internal/OutboundServices/ITokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/IAM/Application/Internal/OutboundServices/ITokenService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/IAM/Application/Internal/QueryServices/UserQueryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/IAM/Application/Internal/QueryServices/UserQueryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/IAM/Domain/Repositories/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/IAM/Domain/Repositories/IUserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/IAM/Domain/Services/IUserCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/IAM/Domain/Services/IUserCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/IAM/Domain/Services/IUserQueryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/IAM/Domain/Services/IUserQueryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/IAM/Infrastructure/Persistence/EFC/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/IAM/Infrastructure/Persistence/EFC/Repositories/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/IAM/Infrastructure/Pipeline/Middleware/Attributes/AllowAnonymousAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/IAM/Infrastructure/Pipeline/Middleware/Attributes/AllowAnonymousAttribute.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/IAM/Infrastructure/Pipeline/Middleware/Attributes/AuthorizeAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/IAM/Infrastructure/Pipeline/Middleware/Attributes/AuthorizeAttribute.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/IAM/Infrastructure/Pipeline/Middleware/Components/RequestAuthorizationMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/IAM/Infrastructure/Pipeline/Middleware/Components/RequestAuthorizationMiddleware.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/IAM/Infrastructure/Pipeline/Middleware/Extensions/RequestAuthorizationMiddlewareExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/IAM/Infrastructure/Pipeline/Middleware/Extensions/RequestAuthorizationMiddlewareExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/IAM/Infrastructure/Tokens/JWT/Services/TokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/IAM/Infrastructure/Tokens/JWT/Services/TokenService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/IAM/Interfaces/ACL/IIamContextFacade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/IAM/Interfaces/ACL/IIamContextFacade.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/IAM/Interfaces/ACL/Services/IamContextFacade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/IAM/Interfaces/ACL/Services/IamContextFacade.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/IAM/Interfaces/REST/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/IAM/Interfaces/REST/AuthenticationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/IAM/Interfaces/REST/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/IAM/Interfaces/REST/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Application/Internal/CommandServices/PaymentCommandService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Application/Internal/QueryServices/PaymentQueryService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Domain/Model/Aggregates/Payment.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Domain/Model/Aggregates/PaymentAudit.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Domain/Model/Commands/CreatePaymentCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Domain/Model/Commands/DeletePaymentCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Domain/Model/Queries/GetAllPaymentsQuery.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Domain/Model/Queries/GetPaymentByIdQuery.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Domain/Model/Queries/GetPaymentsByCronogramaIdQuery.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Domain/Repositories/IPaymentRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Domain/Services/IPaymentCommandService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Domain/Services/IPaymentQueryService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Infrastructure/Persistence/EFC/Repositories/PaymentRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Interfaces/REST/PaymentController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Interfaces/REST/Resources/CreatePaymentResource.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Interfaces/REST/Resources/PaymentResource.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Interfaces/REST/Transform/CreatePaymentCommandFromResourceAssembler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Payments/Interfaces/REST/Transform/PaymentResourceFromEntityAssembler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Profiles/Application/ACL/ProfilesContextFacade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Profiles/Application/ACL/ProfilesContextFacade.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Profiles/Application/Internal/CommandServices/ProfileCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Profiles/Application/Internal/CommandServices/ProfileCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Profiles/Application/Internal/QueryServices/ProfileQueryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Profiles/Application/Internal/QueryServices/ProfileQueryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Profiles/Domain/Model/Aggregates/ProfileAudit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Profiles/Domain/Model/Aggregates/ProfileAudit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Profiles/Domain/Repositories/IProfileRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Profiles/Domain/Repositories/IProfileRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Profiles/Domain/Services/IProfileCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Profiles/Domain/Services/IProfileCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Profiles/Domain/Services/IProfileQueryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Profiles/Domain/Services/IProfileQueryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Profiles/Infrastructure/Persistence/EFC/Repositories/ProfileRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Profiles/Infrastructure/Persistence/EFC/Repositories/ProfileRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Profiles/Interfaces/ACL/IProfilesContextFacade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Profiles/Interfaces/ACL/IProfilesContextFacade.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Profiles/Interfaces/REST/ProfilesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Profiles/Interfaces/REST/ProfilesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Application/Internal/CommandServices/ScheduleCommandService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Application/Internal/QueryServices/ScheduleQueryService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Aggregates/Schedule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Aggregates/ScheduleAudit.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Commands/CreateScheduleCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Commands/DeleteScheduleCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Queries/GetAllSchedulesQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Queries/GetAllCreditOperationsQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Queries/GetScheduleByIdQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Queries/GetCreditOperationByIdQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Queries/GetSchedulesByOperacionIdQuery.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Repositories/IScheduleRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Services/IScheduleCommandService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Services/IScheduleQueryService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Infrastructure/Persistence/EFC/Repositories/ScheduleRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/CreateScheduleResource.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/ScheduleResource.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/ScheduleController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Transform/CreateScheduleCommandFromResourceAssembler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Transform/ScheduleResourceFromEntityAssembler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Shared/Domain/Repositories/IBaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Shared/Domain/Repositories/IBaseRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Shared/Domain/Repositories/IUnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Shared/Domain/Repositories/IUnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Shared/Infrastructure/Interfaces/ASP/Configuration/KebabCaseRouteNamingConvention.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Shared/Infrastructure/Interfaces/ASP/Configuration/KebabCaseRouteNamingConvention.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Shared/Infrastructure/Mediator/Cortex/Configuration/LoggingCommandBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Shared/Infrastructure/Mediator/Cortex/Configuration/LoggingCommandBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Shared/Infrastructure/Persistence/EFC/Configuration/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Shared/Infrastructure/Persistence/EFC/Configuration/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Shared/Infrastructure/Persistence/EFC/Configuration/Extensions/StringExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Shared/Infrastructure/Persistence/EFC/Configuration/Extensions/StringExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Shared/Infrastructure/Persistence/EFC/Repositories/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Shared/Infrastructure/Persistence/EFC/Repositories/BaseRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Shared/Infrastructure/Persistence/EFC/Repositories/UnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Shared/Infrastructure/Persistence/EFC/Repositories/UnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Simulations/Application/Internal/CommandServices/SimulationCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Application/Internal/CommandServices/SimulationCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Simulations/Application/Internal/QueryServices/SimulationQueryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Application/Internal/QueryServices/SimulationQueryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Model/Aggregates/Simulation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Model/Aggregates/Simulation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Model/Aggregates/SimulationAudit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Model/Aggregates/SimulationAudit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Model/Commands/CreateSimulationCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Model/Commands/CreateSimulationCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Services/ISimulationCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Services/ISimulationCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Services/ISimulationQueryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Services/ISimulationQueryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Resources/CreateSimulationResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Resources/CreateSimulationResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Resources/SimulationResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Resources/SimulationResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/SimulationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/SimulationController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/CrediAuto.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/CrediAuto.API.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/ref/CrediAuto.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/ref/CrediAuto.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/refint/CrediAuto.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/refint/CrediAuto.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -399,15 +242,18 @@
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
     &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -498,6 +344,10 @@
       <workItem from="1782976735742" duration="365000" />
       <workItem from="1783018495024" duration="2892000" />
       <workItem from="1783023477858" duration="3584000" />
+      <workItem from="1783027587545" duration="1220000" />
+      <workItem from="1783029359660" duration="294000" />
+      <workItem from="1783029692483" duration="173000" />
+      <workItem from="1783029887335" duration="564000" />
     </task>
     <servers />
   </component>
@@ -526,5 +376,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
