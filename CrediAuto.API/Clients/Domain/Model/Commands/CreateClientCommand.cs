@@ -1,4 +1,6 @@
-﻿namespace CrediAuto.API.Clients.Domain.Model.Commands;
+﻿using CrediAuto.API.Clients.Domain.Model.ValueObjects;
+
+namespace CrediAuto.API.Clients.Domain.Model.Commands;
 
 public record CreateClientCommand(
     string FullName,
@@ -7,5 +9,6 @@ public record CreateClientCommand(
     string Email,
     string Phone,
     decimal MonthlyIncome,
-    int UserId
+    int UserId,
+    ClientStatus Status = ClientStatus.Aprobado
 );

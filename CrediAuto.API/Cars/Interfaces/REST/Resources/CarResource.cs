@@ -9,8 +9,6 @@ public record CarResource(
     string Model,
     int Year,
     decimal Price,
-    string FuelType,
-    string Transmission,
     string Detail,
     CarStatus Status,
     DateTimeOffset? Created,

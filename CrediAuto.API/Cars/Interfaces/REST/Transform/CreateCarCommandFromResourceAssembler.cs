@@ -1,4 +1,5 @@
 ﻿using CrediAuto.API.Cars.Domain.Model.Commands;
+using CrediAuto.API.Cars.Domain.Model.ValueObjects;
 using CrediAuto.API.Cars.Interfaces.REST.Resources;
 
 namespace CrediAuto.API.Cars.Interfaces.REST.Transform;
@@ -11,8 +12,7 @@ public static class CreateCarCommandFromResourceAssembler
             resource.Model,
             resource.Year,
             resource.Price,
-            resource.FuelType,
-            resource.Transmission,
-            resource.Detail
+            resource.Detail,
+            resource.Status ?? CarStatus.Disponible
         );
 }

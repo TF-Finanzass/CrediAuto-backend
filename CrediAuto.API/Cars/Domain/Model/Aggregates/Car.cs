@@ -10,8 +10,6 @@ public partial class Car : CarAudit
     public string Model { get; private set; }
     public int Year { get; private set; }
     public decimal Price { get; private set; }
-    public string FuelType { get; private set; }
-    public string Transmission { get; private set; }
     public string Detail { get; private set; }
     public CarStatus Status { get; private set; }
 
@@ -21,8 +19,6 @@ public partial class Car : CarAudit
         Model = string.Empty;
         Year = 0;
         Price = 0;
-        FuelType = string.Empty;
-        Transmission = string.Empty;
         Detail = string.Empty;
         Status = CarStatus.Disponible;
     }
@@ -33,10 +29,8 @@ public partial class Car : CarAudit
         Model = command.Model;
         Year = command.Year;
         Price = command.Price;
-        FuelType = command.FuelType;
-        Transmission = command.Transmission;
         Detail = command.Detail;
-        Status = CarStatus.Disponible;
+        Status = command.Status;
     }
 
     public void UpdateStatus(CarStatus status)

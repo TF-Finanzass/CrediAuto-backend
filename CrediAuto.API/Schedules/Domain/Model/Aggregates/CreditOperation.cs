@@ -17,6 +17,9 @@ public partial class CreditOperation : CreditOperationAudit
     public decimal InstallmentAmount { get; private set; }
     public int TotalPeriods { get; private set; }
     public int GracePeriods { get; private set; }
+    public decimal Van { get; private set; }
+    public decimal Tir { get; private set; }
+    public decimal DiscountRate { get; private set; }
     public List<Installment> Schedule { get; private set; }
 
     protected CreditOperation()
@@ -38,6 +41,9 @@ public partial class CreditOperation : CreditOperationAudit
         InstallmentAmount = command.InstallmentAmount;
         TotalPeriods = command.TotalPeriods;
         GracePeriods = command.GracePeriods;
+        Van = command.Van;
+        Tir = command.Tir;
+        DiscountRate = command.DiscountRate;
         Schedule = command.Schedule.Select(i => new Installment(i)).ToList();
     }
 }

@@ -13,5 +13,8 @@ public record CreateCreditOperationCommand(
     decimal InstallmentAmount,
     int TotalPeriods,
     int GracePeriods,
+    decimal Van,
+    decimal Tir,
+    decimal DiscountRate,
     List<InstallmentData> Schedule
 );

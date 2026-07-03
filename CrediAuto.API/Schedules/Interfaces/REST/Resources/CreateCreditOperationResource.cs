@@ -14,5 +14,8 @@ public record CreateCreditOperationResource(
     [Required] decimal InstallmentAmount,
     [Required] int TotalPeriods,
     [Required] int GracePeriods,
+    [Required] decimal Van,
+    [Required] decimal Tir,
+    [Required] decimal DiscountRate,
     [Required] List<CreateInstallmentResource> Schedule
 );

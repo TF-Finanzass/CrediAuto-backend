@@ -1,4 +1,5 @@
 ﻿using CrediAuto.API.Clients.Domain.Model.Commands;
+using CrediAuto.API.Clients.Domain.Model.ValueObjects;
 using CrediAuto.API.Clients.Interfaces.REST.Resources;
 
 namespace CrediAuto.API.Clients.Interfaces.REST.Transform;
@@ -13,6 +14,7 @@ public static class CreateClientCommandFromResourceAssembler
             resource.Email,
             resource.Phone,
             resource.MonthlyIncome,
-            resource.UserId
+            resource.UserId,
+            resource.Status ?? ClientStatus.Aprobado
         );
 }

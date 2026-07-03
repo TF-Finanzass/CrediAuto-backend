@@ -24,7 +24,7 @@ public partial class Client : ClientAudit
         Phone = string.Empty;
         MonthlyIncome = 0;
         UserId = 0;
-        Status = ClientStatus.Pendiente;
+        Status = ClientStatus.Aprobado;
     }
 
     public Client(CreateClientCommand command)
@@ -36,7 +36,7 @@ public partial class Client : ClientAudit
         Phone = command.Phone;
         MonthlyIncome = command.MonthlyIncome;
         UserId = command.UserId;
-        Status = ClientStatus.Pendiente;
+        Status = command.Status;
     }
     
     public void UpdateContactInfo(string fullName, string lastName, string email, string phone)

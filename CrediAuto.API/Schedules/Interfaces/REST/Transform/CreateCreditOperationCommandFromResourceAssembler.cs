@@ -1,4 +1,5 @@
-﻿using CrediAuto.API.Schedules.Domain.Model.Commands;
+﻿using System.Linq;
+using CrediAuto.API.Schedules.Domain.Model.Commands;
 using CrediAuto.API.Schedules.Interfaces.REST.Resources;
 
 namespace CrediAuto.API.Schedules.Interfaces.REST.Transform;
@@ -17,6 +18,9 @@ public static class CreateCreditOperationCommandFromResourceAssembler
             resource.InstallmentAmount,
             resource.TotalPeriods,
             resource.GracePeriods,
+            resource.Van,
+            resource.Tir,
+            resource.DiscountRate,
             resource.Schedule.Select(i => new InstallmentData(
                 i.Number,
                 i.DueDate,

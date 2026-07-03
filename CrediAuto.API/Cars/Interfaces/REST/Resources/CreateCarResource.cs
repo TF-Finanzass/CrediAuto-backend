@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using CrediAuto.API.Cars.Domain.Model.ValueObjects;
 
 namespace CrediAuto.API.Cars.Interfaces.REST.Resources;
 
@@ -7,7 +8,6 @@ public record CreateCarResource(
     [Required] string Model,
     [Required] int Year,
     [Required] decimal Price,
-    [Required] string FuelType,
-    [Required] string Transmission,
-    string Detail
+    string Detail,
+    CarStatus? Status = null
 );

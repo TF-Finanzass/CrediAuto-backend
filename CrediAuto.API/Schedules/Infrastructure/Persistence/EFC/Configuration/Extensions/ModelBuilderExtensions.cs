@@ -19,6 +19,9 @@ public static class ModelBuilderExtensions
         builder.Entity<CreditOperation>().Property(o => o.InstallmentAmount).IsRequired();
         builder.Entity<CreditOperation>().Property(o => o.TotalPeriods).IsRequired();
         builder.Entity<CreditOperation>().Property(o => o.GracePeriods).IsRequired();
+        builder.Entity<CreditOperation>().Property(o => o.Van).IsRequired();
+        builder.Entity<CreditOperation>().Property(o => o.Tir).IsRequired();
+        builder.Entity<CreditOperation>().Property(o => o.DiscountRate).IsRequired();
 
         builder.Entity<Installment>().HasKey(i => i.Id);
         builder.Entity<Installment>().Property(i => i.Id).IsRequired().ValueGeneratedOnAdd();

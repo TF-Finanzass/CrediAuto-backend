@@ -2,8 +2,7 @@
 
 public enum ClientStatus
 {
-    Pendiente,
-    EnEvaluacion,
     Aprobado,
+    Pendiente,
     Rechazado
 }

@@ -19,6 +19,9 @@ public static class CreditOperationResourceFromEntityAssembler
             entity.InstallmentAmount,
             entity.TotalPeriods,
             entity.GracePeriods,
+            entity.Van,
+            entity.Tir,
+            entity.DiscountRate,
             entity.Schedule.Select(InstallmentResourceFromEntityAssembler.ToResourceFromEntity).ToList(),
             entity.CreatedDate,
             entity.UpdatedDate

@@ -15,6 +15,9 @@ public record CreditOperationResource(
     decimal InstallmentAmount,
     int TotalPeriods,
     int GracePeriods,
+    decimal Van,
+    decimal Tir,
+    decimal DiscountRate,
     List<InstallmentResource> Schedule,
     DateTimeOffset? Created,
     DateTimeOffset? Updated
