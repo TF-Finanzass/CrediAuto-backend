@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using CrediAuto.API.Schedules.Domain.Model.Aggregates;
+﻿using CrediAuto.API.Schedules.Domain.Model.Aggregates;
 using CrediAuto.API.Schedules.Interfaces.REST.Resources;
 
 namespace CrediAuto.API.Schedules.Interfaces.REST.Transform;
@@ -13,16 +12,34 @@ public static class CreditOperationResourceFromEntityAssembler
             entity.CarId,
             entity.ClientName,
             entity.CarLabel,
-            entity.FinancedAmount,
+            entity.Currency,
+            entity.LoanAmount,
+            entity.FinalInstallmentAmount,
+            entity.NetFinancedBalance,
             entity.Tea,
             entity.PeriodicRate,
             entity.InstallmentAmount,
             entity.TotalPeriods,
-            entity.GracePeriods,
+            entity.GraceTotalPeriods,
+            entity.GracePartialPeriods,
+            new InitialCostsResource(
+                entity.InitialCosts.Notarial,
+                entity.InitialCosts.Registration,
+                entity.InitialCosts.Appraisal,
+                entity.InitialCosts.StudyFee,
+                entity.InitialCosts.ActivationFee
+            ),
+            new PeriodicChargesResource(
+                entity.PeriodicCharges.Gps,
+                entity.PeriodicCharges.Postage,
+                entity.PeriodicCharges.AdministrativeFee
+            ),
+            entity.DesgravamenInsurancePercent,
+            entity.RiskInsurancePercent,
+            entity.Schedule.Select(InstallmentResourceFromEntityAssembler.ToResourceFromEntity).ToList(),
             entity.Van,
             entity.Tir,
             entity.DiscountRate,
-            entity.Schedule.Select(InstallmentResourceFromEntityAssembler.ToResourceFromEntity).ToList(),
             entity.CreatedDate,
             entity.UpdatedDate
         );

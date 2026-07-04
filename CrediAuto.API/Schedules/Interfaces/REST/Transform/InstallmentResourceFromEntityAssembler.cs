@@ -10,12 +10,22 @@ public static class InstallmentResourceFromEntityAssembler
             entity.Id,
             entity.Number,
             entity.DueDate,
+            entity.PeriodType,
             entity.IsGracePeriod,
             entity.InitialBalance,
             entity.Interest,
             entity.Amortization,
-            entity.Insurance,
+            entity.DesgravamenInsurance,
             entity.InstallmentAmount,
-            entity.FinalBalance
+            entity.FinalBalance,
+            entity.RiskInsurance,
+            entity.Gps,
+            entity.Postage,
+            entity.AdministrativeFee,
+            entity.FinalInstallmentInitialBalance,
+            entity.FinalInstallmentInterest,
+            entity.FinalInstallmentAmortization,
+            entity.FinalInstallmentFinalBalance,
+            entity.TotalCashOutflow
         );
 }

@@ -19,15 +19,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ca99013-9ead-40cb-a0ef-7f5b7a193573" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/ValueObjects/Currency.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/ValueObjects/InitialCosts.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/ValueObjects/PeriodicCharges.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/InitialCostsResource.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/PeriodicChargesResource.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Model/ValueObjects/InitialCosts.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Model/ValueObjects/PeriodicCharges.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Resources/InitialCostsResource.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Resources/PeriodicChargesResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/dataSources/data_sources_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Aggregates/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Aggregates/Car.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Commands/CreateCarCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Commands/CreateCarCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Resources/CarResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Resources/CarResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Resources/CreateCarResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Resources/CreateCarResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Transform/CarResourceFromEntityAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Transform/CarResourceFromEntityAssembler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Transform/CreateCarCommandFromResourceAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Transform/CreateCarCommandFromResourceAssembler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Aggregates/CreditOperation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Aggregates/CreditOperation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Aggregates/Installment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Aggregates/Installment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Commands/CreateCreditOperationCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Commands/CreateCreditOperationCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Commands/InstallmentData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Commands/InstallmentData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/CreateCreditOperationResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/CreateCreditOperationResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/CreateInstallmentResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/CreateInstallmentResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/CreditOperationResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/CreditOperationResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/InstallmentResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/InstallmentResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Transform/CreateCreditOperationCommandFromResourceAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Transform/CreateCreditOperationCommandFromResourceAssembler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Transform/CreditOperationResourceFromEntityAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Transform/CreditOperationResourceFromEntityAssembler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Transform/InstallmentResourceFromEntityAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Transform/InstallmentResourceFromEntityAssembler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Model/Aggregates/Simulation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Model/Aggregates/Simulation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Model/Commands/CreateSimulationCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Model/Commands/CreateSimulationCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Simulations/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Resources/CreateSimulationResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Resources/CreateSimulationResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Resources/SimulationResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Resources/SimulationResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Transform/CreateSimulationCommandFromResourceAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Transform/CreateSimulationCommandFromResourceAssembler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Transform/SimulationResourceFromEntityAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Transform/SimulationResourceFromEntityAssembler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.pdb" afterDir="false" />
@@ -129,6 +151,8 @@
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Queries/GetCreditOperationByIdQuery.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Queries/GetCreditOperationsByCarIdQuery.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Queries/GetCreditOperationsByClientIdQuery.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/ValueObjects/InitialCosts.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/ValueObjects/PeriodicCharges.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Repositories/ICreditOperationRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Services/ICreditOperationCommandService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Services/ICreditOperationQueryService.cs" root0="FORCE_HIGHLIGHTING" />
@@ -138,17 +162,23 @@
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/CreateCreditOperationResource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/CreateInstallmentResource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/CreditOperationResource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/InitialCostsResource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/InstallmentResource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Resources/PeriodicChargesResource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Transform/CreateCreditOperationCommandFromResourceAssembler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Transform/CreditOperationResourceFromEntityAssembler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Interfaces/REST/Transform/InstallmentResourceFromEntityAssembler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Simulations/Application/Internal/CommandServices/SimulationCommandService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Simulations/Application/Internal/QueryServices/SimulationQueryService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Model/Queries/GetSimulationByIdQuery.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Model/ValueObjects/InitialCosts.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Model/ValueObjects/PeriodicCharges.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Services/ISimulationCommandService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Simulations/Domain/Services/ISimulationQueryService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Simulations/Infrastructure/Persistence/EFC/Repositories/SimulationRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Resources/CreateSimulationResource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Resources/InitialCostsResource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Resources/PeriodicChargesResource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Resources/SimulationResource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/SimulationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Simulations/Interfaces/REST/Transform/CreateSimulationCommandFromResourceAssembler.cs" root0="FORCE_HIGHLIGHTING" />
@@ -356,6 +386,8 @@
       <workItem from="1783029692483" duration="173000" />
       <workItem from="1783029887335" duration="564000" />
       <workItem from="1783151008400" duration="2401000" />
+      <workItem from="1783190777907" duration="3147000" />
+      <workItem from="1783204725873" duration="2656000" />
     </task>
     <servers />
   </component>

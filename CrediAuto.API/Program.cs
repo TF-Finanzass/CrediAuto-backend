@@ -1,4 +1,3 @@
-using System;
 using CrediAuto.API.IAM.Application.Internal.CommandServices;
 using CrediAuto.API.IAM.Application.Internal.OutboundServices;
 using CrediAuto.API.IAM.Application.Internal.QueryServices;
@@ -46,11 +45,6 @@ using CrediAuto.API.Schedules.Application.Internal.QueryServices;
 using CrediAuto.API.Schedules.Domain.Repositories;
 using CrediAuto.API.Schedules.Domain.Services;
 using CrediAuto.API.Schedules.Infrastructure.Persistence.EFC.Repositories;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 

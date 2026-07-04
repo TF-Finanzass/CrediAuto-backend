@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using CrediAuto.API.Schedules.Domain.Model.ValueObjects;
 
 namespace CrediAuto.API.Schedules.Domain.Model.Commands;
 
@@ -7,12 +7,20 @@ public record CreateCreditOperationCommand(
     int CarId,
     string ClientName,
     string CarLabel,
-    decimal FinancedAmount,
+    string Currency,
+    decimal LoanAmount,
+    decimal FinalInstallmentAmount,
+    decimal NetFinancedBalance,
     decimal Tea,
     decimal PeriodicRate,
     decimal InstallmentAmount,
     int TotalPeriods,
-    int GracePeriods,
+    int GraceTotalPeriods,
+    int GracePartialPeriods,
+    InitialCosts InitialCosts,
+    PeriodicCharges PeriodicCharges,
+    decimal DesgravamenInsurancePercent,
+    decimal RiskInsurancePercent,
     decimal Van,
     decimal Tir,
     decimal DiscountRate,

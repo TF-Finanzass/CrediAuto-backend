@@ -1,16 +1,24 @@
-﻿using System;
-
-namespace CrediAuto.API.Schedules.Interfaces.REST.Resources;
+﻿namespace CrediAuto.API.Schedules.Interfaces.REST.Resources;
 
 public record InstallmentResource(
     int Id,
     int Number,
     DateTime DueDate,
+    string PeriodType,
     bool IsGracePeriod,
     decimal InitialBalance,
     decimal Interest,
     decimal Amortization,
-    decimal Insurance,
+    decimal DesgravamenInsurance,
     decimal InstallmentAmount,
-    decimal FinalBalance
+    decimal FinalBalance,
+    decimal RiskInsurance,
+    decimal Gps,
+    decimal Postage,
+    decimal AdministrativeFee,
+    decimal FinalInstallmentInitialBalance,
+    decimal FinalInstallmentInterest,
+    decimal FinalInstallmentAmortization,
+    decimal FinalInstallmentFinalBalance,
+    decimal TotalCashOutflow
 );

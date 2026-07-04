@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace CrediAuto.API.Schedules.Interfaces.REST.Resources;
+﻿namespace CrediAuto.API.Schedules.Interfaces.REST.Resources;
 
 public record CreditOperationResource(
     int Id,
@@ -9,16 +6,24 @@ public record CreditOperationResource(
     int CarId,
     string ClientName,
     string CarLabel,
-    decimal FinancedAmount,
+    string Currency,
+    decimal LoanAmount,
+    decimal FinalInstallmentAmount,
+    decimal NetFinancedBalance,
     decimal Tea,
     decimal PeriodicRate,
     decimal InstallmentAmount,
     int TotalPeriods,
-    int GracePeriods,
+    int GraceTotalPeriods,
+    int GracePartialPeriods,
+    InitialCostsResource InitialCosts,
+    PeriodicChargesResource PeriodicCharges,
+    decimal DesgravamenInsurancePercent,
+    decimal RiskInsurancePercent,
+    List<InstallmentResource> Schedule,
     decimal Van,
     decimal Tir,
     decimal DiscountRate,
-    List<InstallmentResource> Schedule,
     DateTimeOffset? Created,
     DateTimeOffset? Updated
 );
