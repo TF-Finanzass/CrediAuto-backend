@@ -12,6 +12,7 @@ public static class CarResourceFromEntityAssembler
             entity.Model,
             entity.Year,
             entity.Price,
+            entity.Currency,
             entity.Detail,
             entity.Status,
             entity.CreatedDate,

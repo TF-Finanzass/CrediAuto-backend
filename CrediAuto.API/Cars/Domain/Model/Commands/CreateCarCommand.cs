@@ -7,6 +7,7 @@ public record CreateCarCommand(
     string Model,
     int Year,
     decimal Price,
+    Currency Currency,
     string Detail,
     CarStatus Status = CarStatus.Disponible
 );

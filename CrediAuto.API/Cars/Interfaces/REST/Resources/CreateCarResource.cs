@@ -8,6 +8,7 @@ public record CreateCarResource(
     [Required] string Model,
     [Required] int Year,
     [Required] decimal Price,
+    [Required] Currency Currency,
     string Detail,
     CarStatus? Status = null
 );

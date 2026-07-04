@@ -10,6 +10,7 @@ public partial class Car : CarAudit
     public string Model { get; private set; }
     public int Year { get; private set; }
     public decimal Price { get; private set; }
+    public Currency Currency { get; private set; }
     public string Detail { get; private set; }
     public CarStatus Status { get; private set; }
 
@@ -19,6 +20,7 @@ public partial class Car : CarAudit
         Model = string.Empty;
         Year = 0;
         Price = 0;
+        Currency = Currency.PEN;
         Detail = string.Empty;
         Status = CarStatus.Disponible;
     }
@@ -29,6 +31,7 @@ public partial class Car : CarAudit
         Model = command.Model;
         Year = command.Year;
         Price = command.Price;
+        Currency = command.Currency;
         Detail = command.Detail;
         Status = command.Status;
     }

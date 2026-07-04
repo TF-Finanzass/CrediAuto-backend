@@ -13,6 +13,10 @@ public static class ModelBuilderExtensions
         builder.Entity<Car>().Property(c => c.Model).IsRequired();
         builder.Entity<Car>().Property(c => c.Year).IsRequired();
         builder.Entity<Car>().Property(c => c.Price).IsRequired();
+        builder.Entity<Car>()
+            .Property(c => c.Currency)
+            .HasConversion<string>()
+            .IsRequired();
         builder.Entity<Car>().Property(c => c.Detail);
         builder.Entity<Car>()
             .Property(c => c.Status)

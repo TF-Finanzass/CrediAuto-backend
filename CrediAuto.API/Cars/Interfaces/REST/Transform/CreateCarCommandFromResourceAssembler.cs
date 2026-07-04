@@ -12,6 +12,7 @@ public static class CreateCarCommandFromResourceAssembler
             resource.Model,
             resource.Year,
             resource.Price,
+            resource.Currency,
             resource.Detail,
             resource.Status ?? CarStatus.Disponible
         );

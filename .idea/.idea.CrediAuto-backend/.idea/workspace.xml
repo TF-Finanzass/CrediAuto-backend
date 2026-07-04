@@ -19,13 +19,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ca99013-9ead-40cb-a0ef-7f5b7a193573" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/ValueObjects/Currency.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CrediAuto-backend/.idea/dataSources/data_sources_history.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Aggregates/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Aggregates/Car.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Commands/CreateCarCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Commands/CreateCarCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Resources/CarResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Resources/CarResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Resources/CreateCarResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Resources/CreateCarResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Transform/CarResourceFromEntityAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Transform/CarResourceFromEntityAssembler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Transform/CreateCarCommandFromResourceAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/Cars/Interfaces/REST/Transform/CreateCarCommandFromResourceAssembler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/bin/Debug/net9.0/CrediAuto.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/CrediAuto.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/CrediAuto.API.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/CrediAuto.API.sourcelink.json" afterDir="false" />
@@ -34,6 +44,12 @@
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/refint/CrediAuto.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/refint/CrediAuto.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/rpswa.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/Debug/net9.0/rpswa.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrediAuto.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/CrediAuto.API/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +72,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Cars/Application/Internal/CommandServices/CarCommandService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Cars/Application/Internal/QueryServices/CarQueryService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Aggregates/Car.cs" root0="FORCE_HIGHLIGHTING" />
@@ -66,6 +81,7 @@
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Queries/GetAllCarsQuery.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/Queries/GetCarByIdQuery.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/ValueObjects/CarStatus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Model/ValueObjects/Currency.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Repositories/ICarRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Services/ICarCommandService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Cars/Domain/Services/ICarQueryService.cs" root0="FORCE_HIGHLIGHTING" />
@@ -101,15 +117,6 @@
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Clients/Interfaces/REST/Resources/UpdateClientStatusResource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Clients/Interfaces/REST/Transform/ClientResourceFromEntityAssembler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Clients/Interfaces/REST/Transform/CreateClientCommandFromResourceAssembler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Payments/Application/Internal/CommandServices/PaymentCommandService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Payments/Application/Internal/QueryServices/PaymentQueryService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Payments/Domain/Model/Queries/GetPaymentsByCronogramaIdQuery.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Payments/Infrastructure/Persistence/EFC/Repositories/PaymentRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Payments/Interfaces/REST/PaymentController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Payments/Interfaces/REST/Resources/CreatePaymentResource.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Payments/Interfaces/REST/Resources/PaymentResource.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Payments/Interfaces/REST/Transform/CreatePaymentCommandFromResourceAssembler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CrediAuto.API/Payments/Interfaces/REST/Transform/PaymentResourceFromEntityAssembler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Application/Internal/CommandServices/CreditOperationCommandService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Application/Internal/QueryServices/CreditOperationQueryService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CrediAuto.API/Schedules/Domain/Model/Aggregates/CreditOperation.cs" root0="FORCE_HIGHLIGHTING" />
@@ -244,7 +251,7 @@
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
     &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Julio&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -348,6 +355,7 @@
       <workItem from="1783029359660" duration="294000" />
       <workItem from="1783029692483" duration="173000" />
       <workItem from="1783029887335" duration="564000" />
+      <workItem from="1783151008400" duration="2401000" />
     </task>
     <servers />
   </component>
