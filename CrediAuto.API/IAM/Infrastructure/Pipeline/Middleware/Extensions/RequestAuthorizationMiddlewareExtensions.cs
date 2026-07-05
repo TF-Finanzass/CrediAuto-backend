@@ -1,5 +1,4 @@
 using CrediAuto.API.IAM.Infrastructure.Pipeline.Middleware.Components;
-using Microsoft.AspNetCore.Builder;
 
 namespace CrediAuto.API.IAM.Infrastructure.Pipeline.Middleware.Extensions;
 

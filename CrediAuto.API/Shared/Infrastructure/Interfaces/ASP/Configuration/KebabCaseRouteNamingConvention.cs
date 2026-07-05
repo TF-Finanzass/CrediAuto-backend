@@ -1,4 +1,3 @@
-using System.Linq;
 using CrediAuto.API.Shared.Infrastructure.Interfaces.ASP.Configuration.Extensions;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 

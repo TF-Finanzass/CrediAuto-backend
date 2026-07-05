@@ -1,5 +1,3 @@
-using System;
-using System.Threading.Tasks;
 using CrediAuto.API.IAM.Application.Internal.OutboundServices;
 using CrediAuto.API.IAM.Domain.Model.Aggregates;
 using CrediAuto.API.IAM.Domain.Model.Commands;

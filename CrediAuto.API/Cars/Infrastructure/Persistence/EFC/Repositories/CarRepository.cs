@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CrediAuto.API.Cars.Domain.Model.Aggregates;
+﻿using CrediAuto.API.Cars.Domain.Model.Aggregates;
 using CrediAuto.API.Cars.Domain.Model.ValueObjects;
 using CrediAuto.API.Cars.Domain.Repositories;
 using CrediAuto.API.Shared.Infrastructure.Persistence.EFC.Configuration;

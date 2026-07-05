@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using CrediAuto.API.Simulations.Domain.Model.Aggregates;
-using CrediAuto.API.Simulations.Domain.Model.Queries;
+﻿using CrediAuto.API.Simulations.Domain.Model.Queries;
 
 namespace CrediAuto.API.Simulations.Domain.Services;
 

@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CrediAuto.API.Schedules.Domain.Model.Aggregates;
+﻿using CrediAuto.API.Schedules.Domain.Model.Aggregates;
 using CrediAuto.API.Schedules.Domain.Repositories;
 using CrediAuto.API.Shared.Infrastructure.Persistence.EFC.Configuration;
 using CrediAuto.API.Shared.Infrastructure.Persistence.EFC.Repositories;

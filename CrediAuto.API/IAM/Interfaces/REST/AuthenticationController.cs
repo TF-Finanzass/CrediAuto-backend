@@ -1,10 +1,8 @@
 using System.Net.Mime;
-using System.Threading.Tasks;
 using CrediAuto.API.IAM.Domain.Services;
 using CrediAuto.API.IAM.Infrastructure.Pipeline.Middleware.Attributes;
 using CrediAuto.API.IAM.Interfaces.REST.Resources;
 using CrediAuto.API.IAM.Interfaces.REST.Transform;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 

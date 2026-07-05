@@ -1,5 +1,4 @@
-﻿using System;
-using CrediAuto.API.Clients.Domain.Model.ValueObjects;
+﻿using CrediAuto.API.Clients.Domain.Model.ValueObjects;
 
 namespace CrediAuto.API.Clients.Interfaces.REST.Resources;
 

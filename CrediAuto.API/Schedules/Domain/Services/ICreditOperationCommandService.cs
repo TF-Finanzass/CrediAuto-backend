@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using CrediAuto.API.Schedules.Domain.Model.Aggregates;
+﻿using CrediAuto.API.Schedules.Domain.Model.Aggregates;
 using CrediAuto.API.Schedules.Domain.Model.Commands;
 
 namespace CrediAuto.API.Schedules.Domain.Services;

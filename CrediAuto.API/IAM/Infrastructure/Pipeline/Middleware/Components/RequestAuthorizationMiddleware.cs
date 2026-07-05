@@ -1,11 +1,7 @@
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 using CrediAuto.API.IAM.Application.Internal.OutboundServices;
 using CrediAuto.API.IAM.Domain.Model.Queries;
 using CrediAuto.API.IAM.Domain.Services;
 using CrediAuto.API.IAM.Infrastructure.Pipeline.Middleware.Attributes;
-using Microsoft.AspNetCore.Http;
 
 namespace CrediAuto.API.IAM.Infrastructure.Pipeline.Middleware.Components;
 

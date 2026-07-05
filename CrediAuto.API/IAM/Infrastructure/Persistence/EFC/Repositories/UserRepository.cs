@@ -1,5 +1,3 @@
-using System.Linq;
-using System.Threading.Tasks;
 using CrediAuto.API.IAM.Domain.Model.Aggregates;
 using CrediAuto.API.IAM.Domain.Repositories;
 using CrediAuto.API.Shared.Infrastructure.Persistence.EFC.Configuration;

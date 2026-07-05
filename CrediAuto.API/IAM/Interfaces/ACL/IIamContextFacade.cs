@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using CrediAuto.API.IAM.Domain.Model.Enums;
 
 namespace CrediAuto.API.IAM.Interfaces.ACL;

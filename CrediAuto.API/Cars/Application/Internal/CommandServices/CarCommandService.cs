@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using CrediAuto.API.Cars.Domain.Model.Aggregates;
+﻿using CrediAuto.API.Cars.Domain.Model.Aggregates;
 using CrediAuto.API.Cars.Domain.Model.Commands;
 using CrediAuto.API.Cars.Domain.Repositories;
 using CrediAuto.API.Cars.Domain.Services;

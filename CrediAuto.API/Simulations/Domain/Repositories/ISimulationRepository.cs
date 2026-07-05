@@ -1,6 +1,4 @@
-﻿using CrediAuto.API.Simulations.Domain.Model.Aggregates;
-using CrediAuto.API.Shared.Domain.Repositories;
-
+﻿using CrediAuto.API.Shared.Domain.Repositories;
 
 namespace CrediAuto.API.Simulations.Domain.Repositories;
 

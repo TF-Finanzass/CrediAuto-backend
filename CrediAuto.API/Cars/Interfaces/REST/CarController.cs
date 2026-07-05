@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mime;
-using System.Threading.Tasks;
+﻿using System.Net.Mime;
 using CrediAuto.API.Cars.Domain.Model.Commands;
 using CrediAuto.API.Cars.Domain.Model.Queries;
 using CrediAuto.API.Cars.Domain.Model.ValueObjects;
@@ -9,7 +6,6 @@ using CrediAuto.API.Cars.Domain.Services;
 using CrediAuto.API.Cars.Interfaces.REST.Resources;
 using CrediAuto.API.Cars.Interfaces.REST.Transform;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 

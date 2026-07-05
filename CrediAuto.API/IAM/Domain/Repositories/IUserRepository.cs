@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using CrediAuto.API.IAM.Domain.Model.Aggregates;
 using CrediAuto.API.Shared.Domain.Repositories;
 

@@ -1,13 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mime;
-using System.Threading.Tasks;
+﻿using System.Net.Mime;
 using CrediAuto.API.Schedules.Domain.Model.Commands;
 using CrediAuto.API.Schedules.Domain.Model.Queries;
 using CrediAuto.API.Schedules.Domain.Services;
 using CrediAuto.API.Schedules.Interfaces.REST.Resources;
 using CrediAuto.API.Schedules.Interfaces.REST.Transform;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 

@@ -1,5 +1,3 @@
-using System;
-using System.Linq;
 using CrediAuto.API.IAM.Domain.Model.Aggregates;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
