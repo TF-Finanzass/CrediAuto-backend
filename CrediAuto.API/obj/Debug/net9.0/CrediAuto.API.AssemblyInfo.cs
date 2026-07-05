@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CrediAuto.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d636d94f9cfaac19ba226e79938cd2aa4815b2e7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89e58cd625f5d0a6e2e816ab2e14e40eeb081a60")]
 [assembly: System.Reflection.AssemblyProductAttribute("CrediAuto.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CrediAuto.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

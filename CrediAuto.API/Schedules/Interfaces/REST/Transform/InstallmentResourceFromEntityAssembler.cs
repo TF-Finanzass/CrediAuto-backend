@@ -25,6 +25,7 @@ public static class InstallmentResourceFromEntityAssembler
             entity.FinalInstallmentInitialBalance,
             entity.FinalInstallmentInterest,
             entity.FinalInstallmentAmortization,
+            entity.FinalInstallmentDesgravamenInsurance,
             entity.FinalInstallmentFinalBalance,
             entity.TotalCashOutflow
         );

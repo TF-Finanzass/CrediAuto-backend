@@ -19,6 +19,7 @@ public record InstallmentResource(
     decimal FinalInstallmentInitialBalance,
     decimal FinalInstallmentInterest,
     decimal FinalInstallmentAmortization,
+    decimal FinalInstallmentDesgravamenInsurance,
     decimal FinalInstallmentFinalBalance,
     decimal TotalCashOutflow
 );

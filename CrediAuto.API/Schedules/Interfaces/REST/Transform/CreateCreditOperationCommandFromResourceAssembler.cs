@@ -57,6 +57,7 @@ public static class CreateCreditOperationCommandFromResourceAssembler
                 i.FinalInstallmentInitialBalance,
                 i.FinalInstallmentInterest,
                 i.FinalInstallmentAmortization,
+                i.FinalInstallmentDesgravamenInsurance,
                 i.FinalInstallmentFinalBalance,
                 i.TotalCashOutflow
             )).ToList()

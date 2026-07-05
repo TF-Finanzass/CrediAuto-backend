@@ -71,6 +71,7 @@ public static class ModelBuilderExtensions
         builder.Entity<Installment>().Property(i => i.FinalInstallmentInitialBalance).IsRequired();
         builder.Entity<Installment>().Property(i => i.FinalInstallmentInterest).IsRequired();
         builder.Entity<Installment>().Property(i => i.FinalInstallmentAmortization).IsRequired();
+        builder.Entity<Installment>().Property(i => i.FinalInstallmentDesgravamenInsurance).IsRequired();
         builder.Entity<Installment>().Property(i => i.FinalInstallmentFinalBalance).IsRequired();
 
         builder.Entity<Installment>().Property(i => i.TotalCashOutflow).IsRequired();

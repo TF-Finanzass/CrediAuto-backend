@@ -20,6 +20,7 @@ public record CreateInstallmentResource(
     [Required] decimal FinalInstallmentInitialBalance,
     [Required] decimal FinalInstallmentInterest,
     [Required] decimal FinalInstallmentAmortization,
+    [Required] decimal FinalInstallmentDesgravamenInsurance,
     [Required] decimal FinalInstallmentFinalBalance,
     [Required] decimal TotalCashOutflow
 );

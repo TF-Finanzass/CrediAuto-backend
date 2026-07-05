@@ -27,6 +27,7 @@ public class Installment
     public decimal FinalInstallmentInitialBalance { get; private set; }
     public decimal FinalInstallmentInterest { get; private set; }
     public decimal FinalInstallmentAmortization { get; private set; }
+    public decimal FinalInstallmentDesgravamenInsurance { get; private set; }
     public decimal FinalInstallmentFinalBalance { get; private set; }
 
     public decimal TotalCashOutflow { get; private set; }
@@ -58,6 +59,7 @@ public class Installment
         FinalInstallmentInitialBalance = data.FinalInstallmentInitialBalance;
         FinalInstallmentInterest = data.FinalInstallmentInterest;
         FinalInstallmentAmortization = data.FinalInstallmentAmortization;
+        FinalInstallmentDesgravamenInsurance = data.FinalInstallmentDesgravamenInsurance;
         FinalInstallmentFinalBalance = data.FinalInstallmentFinalBalance;
 
         TotalCashOutflow = data.TotalCashOutflow;
