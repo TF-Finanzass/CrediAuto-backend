@@ -53,31 +53,13 @@ public class ClientCommandService(
         if (client is null) return null;
         try
         {
-            client.UpdateContactInfo(command.FullName, command.LastName, command.Email, command.Phone);
+            client.UpdateContactInfo(command.FullName, command.LastName, command.DocumentNumber, command.Email, command.Phone, command.MonthlyIncome, command.Status);
             clientRepository.Update(client);
             await unitOfWork.CompleteAsync();
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Error updating Client: {ex.Message}");
-            return null;
-        }
-        return client;
-    }
-
-    public async Task<Client?> Handle(UpdateClientStatusCommand command)
-    {
-        var client = await clientRepository.FindByIdAsync(command.ClientId);
-        if (client is null) return null;
-        try
-        {
-            client.UpdateStatus(command.Status);
-            clientRepository.Update(client);
-            await unitOfWork.CompleteAsync();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Error updating Client status: {ex.Message}");
             return null;
         }
         return client;

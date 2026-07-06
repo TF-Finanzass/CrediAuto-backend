@@ -39,12 +39,15 @@ public partial class Client : ClientAudit
         Status = command.Status;
     }
     
-    public void UpdateContactInfo(string fullName, string lastName, string email, string phone)
+    public void UpdateContactInfo(string fullName, string lastName, string documentNumber, string email, string phone, decimal monthlyIncome, ClientStatus status)
     {
         FullName = fullName;
         LastName = lastName;
+        DocumentNumber = documentNumber;
         Email = email;
         Phone = phone;
+        MonthlyIncome = monthlyIncome;
+        Status = status;
     }
 
     public void UpdateStatus(ClientStatus status)

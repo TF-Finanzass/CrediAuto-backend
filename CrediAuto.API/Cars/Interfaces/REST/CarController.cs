@@ -91,4 +91,17 @@ public class CarController(
         if (!result) return NotFound($"Car with ID {id} not found.");
         return NoContent();
     }
+    
+    [HttpPut("{id:int}")]
+    [SwaggerOperation(Summary = "Update a Car", OperationId = "UpdateCar")]
+    [SwaggerResponse(200, "Car updated", typeof(CarResource))]
+    [SwaggerResponse(404, "Car not found")]
+    public async Task<IActionResult> UpdateCar(int id, [FromBody] UpdateCarResource resource)
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var command = UpdateCarCommandFromResourceAssembler.ToCommandFromResource(id, resource);
+        var result = await carCommandService.Handle(command);
+        if (result is null) return NotFound($"Car with ID {id} not found.");
+        return Ok(CarResourceFromEntityAssembler.ToResourceFromEntity(result));
+    }
 }

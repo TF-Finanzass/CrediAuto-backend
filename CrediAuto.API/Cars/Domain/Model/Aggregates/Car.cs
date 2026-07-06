@@ -40,4 +40,15 @@ public partial class Car : CarAudit
     {
         Status = status;
     }
+    
+    public void Update(UpdateCarCommand command)
+    {
+        Brand = command.Brand;
+        Model = command.Model;
+        Year = command.Year;
+        Price = command.Price;
+        Currency = command.Currency;
+        Detail = command.Detail;
+        Status = command.Status;
+    }
 }
