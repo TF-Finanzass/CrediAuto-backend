@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xG/wSewa6Go=",
+  "dgSpecHash": "L78P8nriUWY=",
   "success": true,
   "projectFilePath": "D:\\Projects\\Rider\\CrediAuto-backend\\CrediAuto.API\\CrediAuto.API.csproj",
   "expectedPackageFiles": [
@@ -92,6 +92,8 @@
     "C:\\Users\\Julio\\.nuget\\packages\\mysql.data\\9.5.0\\mysql.data.9.5.0.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\mysql.entityframeworkcore\\9.0.9\\mysql.entityframeworkcore.9.0.9.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
+    "C:\\Users\\Julio\\.nuget\\packages\\npgsql\\9.0.3\\npgsql.9.0.3.nupkg.sha512",
+    "C:\\Users\\Julio\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.4\\npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
