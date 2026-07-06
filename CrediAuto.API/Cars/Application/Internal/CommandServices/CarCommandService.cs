@@ -61,4 +61,22 @@ public class CarCommandService(
         }
         return car;
     }
+    
+    public async Task<Car?> Handle(UpdateCarCommand command)
+    {
+        var car = await carRepository.FindByIdAsync(command.CarId);
+        if (car is null) return null;
+        try
+        {
+            car.Update(command);
+            carRepository.Update(car);
+            await unitOfWork.CompleteAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error updating Car: {ex.Message}");
+            return null;
+        }
+        return car;
+    }
 }

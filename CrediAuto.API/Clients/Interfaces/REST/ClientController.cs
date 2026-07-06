@@ -78,13 +78,13 @@ public class ClientController(
     }
 
     [HttpPut("{id:int}")]
-    [SwaggerOperation(Summary = "Update a Client's contact information", OperationId = "UpdateClient")]
+    [SwaggerOperation(Summary = "Update a Client", OperationId = "UpdateClient")]
     [SwaggerResponse(200, "Client updated", typeof(ClientResource))]
     [SwaggerResponse(404, "Client not found")]
     public async Task<IActionResult> UpdateClient(int id, [FromBody] UpdateClientResource resource)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
-        var command = new UpdateClientCommand(id, resource.FullName, resource.LastName, resource.Email, resource.Phone);
+        var command = new UpdateClientCommand(id, resource.FullName, resource.LastName, resource.DocumentNumber, resource.Email, resource.Phone, resource.MonthlyIncome, resource.Status);
         var result = await clientCommandService.Handle(command);
         if (result is null) return NotFound($"Client with ID {id} not found.");
         return Ok(ClientResourceFromEntityAssembler.ToResourceFromEntity(result));
@@ -98,19 +98,6 @@ public class ClientController(
         var results = await clientQueryService.Handle(new GetClientsByStatusQuery(status));
         var resources = results.Select(ClientResourceFromEntityAssembler.ToResourceFromEntity).ToList();
         return Ok(resources);
-    }
-
-    [HttpPatch("{id:int}/status")]
-    [SwaggerOperation(Summary = "Update Client status", OperationId = "UpdateClientStatus")]
-    [SwaggerResponse(200, "Client status updated", typeof(ClientResource))]
-    [SwaggerResponse(404, "Client not found")]
-    public async Task<IActionResult> UpdateClientStatus(int id, [FromBody] UpdateClientStatusResource resource)
-    {
-        if (!ModelState.IsValid) return BadRequest(ModelState);
-        var command = new UpdateClientStatusCommand(id, resource.Status);
-        var result = await clientCommandService.Handle(command);
-        if (result is null) return NotFound($"Client with ID {id} not found.");
-        return Ok(ClientResourceFromEntityAssembler.ToResourceFromEntity(result));
     }
 
     [HttpDelete("{id:int}")]

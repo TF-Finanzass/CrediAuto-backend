@@ -8,5 +8,4 @@ public interface IClientCommandService
     Task<Client?> Handle(CreateClientCommand command);
     Task<bool> Handle(DeleteClientCommand command);
     Task<Client?> Handle(UpdateClientCommand command);
-    Task<Client?> Handle(UpdateClientStatusCommand command);
 }

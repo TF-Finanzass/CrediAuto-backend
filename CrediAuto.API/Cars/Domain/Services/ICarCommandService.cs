@@ -9,4 +9,5 @@ public interface ICarCommandService
     Task<Car?> Handle(CreateCarCommand command);
     Task<bool> Handle(DeleteCarCommand command);
     Task<Car?> Handle(UpdateCarStatusCommand command);
+    Task<Car?> Handle(UpdateCarCommand command);
 }
